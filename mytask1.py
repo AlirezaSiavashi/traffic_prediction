@@ -19,7 +19,7 @@ for file in files:
     # Read each file into a DataFrame
     df = pd.read_csv(file, sep='\t', usecols=[0, 1, 7], names=column_names)
     # Append the DataFrame to the list
-    dfs.append(df)
+    dfs.append(df_final)
 
 # Concatenate all DataFrames into a single DataFrame
 df_final = pd.concat(dfs, ignore_index=True)
